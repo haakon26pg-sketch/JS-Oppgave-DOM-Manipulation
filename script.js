@@ -4,6 +4,7 @@
 const openChest = document.querySelector("#openChest");
 const lootName = document.querySelector("#lootName");
 const lootRarity = document.querySelector("#lootRarity");
+const lootAttack = document.querySelector("#lootAttack");
 
 const items = [
     {
@@ -48,6 +49,13 @@ const randomitem = items[randomIndex];
 
 console.log(randomitem.name);
 console.log(randomitem.rarity);
+
+// Oppdaterer HTML med våpenet som ble gitt
+lootName.textContent = `You found a ${randomitem.name}!`;
+lootRarity.textContent = randomitem.rarity;
+
+// Gi angrepspoeng til våpenet
+lootAttack.textContent = `Attack: ${randomitem.attack}`;
 
 // Gi sjeldenhetsgrader forskjellige farger
 
