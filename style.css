@@ -1,4 +1,13 @@
-/* Designe loot-box div elementet */
+/* Designe loot-box div siden */
+
+body {
+    background-color: #171715;
+    color: #f1ec4ca;
+    font-family: Georgia, serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
 
 .loot-box {
     background: #252525;
@@ -9,6 +18,17 @@
     color:white; 
 }
 
-#lootyRarity {
+#lootRarity {
+
     font-weight: bold;
+    background-color: rgb(99, 98, 98) ;
+    border-radius: 20px;
+    width: 80px;
+    text-align: center;
+    text-shadow: white 1px 1px;
+    font-family: sans-serif;
+    margin: auto;
+    padding: 20px;
+    box-shadow: black 1px 1px;
+
 }

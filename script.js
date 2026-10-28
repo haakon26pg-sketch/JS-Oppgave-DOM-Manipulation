@@ -5,6 +5,7 @@ const openChest = document.querySelector("#openChest");
 const lootName = document.querySelector("#lootName");
 const lootRarity = document.querySelector("#lootRarity");
 const lootAttack = document.querySelector("#lootAttack");
+const inventorylist = document.querySelector("#inventoryList");
 
 const items = [
     {
@@ -12,15 +13,30 @@ const items = [
         rarity: "Common",
         attack: 3
     },
+     {
+        name: "Rusty Sword",
+        rarity: "Uncommon",
+        attack: 6
+    },
     {
         name: "Steel Longsowrd",
         rarity: "Uncommon",
         attack: 12
     },
+      {
+        name: "Steel Longsowrd",
+        rarity: "Rare",
+        attack: 17
+    },
     {
         name: "Elven Bow",
         rarity: "Rare",
         attack: 25
+    },
+        {
+        name: "Elven Bow",
+        rarity: "Common",
+        attack: 8
     },
     {
         name: "Staff of the Ancients",
@@ -31,8 +47,14 @@ const items = [
         name: "Dragonslayer",
         rarity: "Legendary",
         attack: 75
+    },    {
+        name: "Sword of The Seven Cosmos",
+        rarity: "Godlike",
+        attack: 1337
     }
 ];
+
+const inventory = [];
 
 openChest.addEventListener("click", function () {
 
@@ -59,7 +81,9 @@ lootAttack.textContent = `Attack: ${randomitem.attack}`;
 
 // Gi sjeldenhetsgrader forskjellige farger
 
-    if (randomitem.rarity === "Legendary") {
+if (randomitem.rarity === "Godlike") {
+        lootRarity.style.color = "turquoise"
+    } else if (randomitem.rarity === "Legendary") {
         lootRarity.style.color = "gold";
     } else if (randomitem.rarity === "Epic") {
         lootRarity.style.color = "purple";
@@ -70,7 +94,21 @@ lootAttack.textContent = `Attack: ${randomitem.attack}`;
     } else {
         lootRarity.style.color = "gray";
     }
+
+// Gjenstander som havner i inventory
+inventory.push(randomitem);
+
+const inventoryItem = document.createElement("li");
+
+inventoryItem.textContent = `${randomitem.name} - ${randomitem.rarity} - Attack: ${randomitem.attack}`;
+
+inventorylist.appendChild(inventoryItem);
+
+console.log(inventory);
+
 });
+
+
 
 
 
