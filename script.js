@@ -6,6 +6,7 @@ const lootName = document.querySelector("#lootName");
 const lootRarity = document.querySelector("#lootRarity");
 const lootAttack = document.querySelector("#lootAttack");
 const inventorylist = document.querySelector("#inventoryList");
+const lootBox = document.querySelector(".loot-box");
 
 const items = [
     {
@@ -57,6 +58,17 @@ const items = [
 const inventory = [];
 
 openChest.addEventListener("click", function () {
+
+    lootBox.animate(
+        [
+            { transform: "scale(0.95)", opacity: 0.5},
+            { transform: "scale(1)", opacity: 1},
+        ],
+        {
+            duration: 350,
+            easing: "ease-out"
+        }
+    );
 
 
 // Lage randomizer til innholdet som kommer fra kista
