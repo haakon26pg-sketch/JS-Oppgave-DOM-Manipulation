@@ -1,12 +1,14 @@
 // Mål for oppgaven: Lage en randomized loot kiste som gir tilfeldige graderinger av forskjellige fantasi våpen til et potensielt spill.
 //Lage en array med fem våpen. Legge til sjeldenhetsgrader og lage et inventory som viser hva slags gjenstander man har fått fra kisten.
 
-const container = document.querySelector("#loot-selector");
+const openChest = document.querySelector("#openChest");
+const lootName = document.querySelector("#lootName");
+const lootRarity = document.querySelector("#lootRarity");
 
 const items = [
     {
         name: "Rusty Sword",
-        Rarity: "Common",
+        rarity: "Common",
         attack: 3
     },
     {
@@ -31,6 +33,8 @@ const items = [
     }
 ];
 
+openChest.addEventListener("click", function () {
+
 
 // Lage randomizer til innholdet som kommer fra kista
 
@@ -47,15 +51,18 @@ console.log(randomitem.rarity);
 
 // Gi sjeldenhetsgrader forskjellige farger
 
-if(randomitem.rarity === "Legendary") {
-    lootResult.style.color = "gold";
-} else if (randomitem.rarity === "Epic") {
-    lootResult.style.color === "Purple";
-} else if (randomitem.rarity === "Rare") {
-    lootResult.style.color = "blue";
-} else {
-    lootResult.style.color = "gray";
-}
+    if (randomitem.rarity === "Legendary") {
+        lootRarity.style.color = "gold";
+    } else if (randomitem.rarity === "Epic") {
+        lootRarity.style.color = "purple";
+    } else if (randomitem.rarity === "Rare") {
+        lootRarity.style.color = "blue";
+    } else if (randomitem.rarity === "Uncommon") {
+        lootRarity.style.color = "green";
+    } else {
+        lootRarity.style.color = "gray";
+    }
+});
 
-// Legge til "You found.."
-lootResult.textcontent = `You found a ${randomitem.name}!`;
+
+
