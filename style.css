@@ -1,0 +1,14 @@
+/* Designe loot-box div elementet */
+
+.loot-box {
+    background: #252525;
+    border: 2px solid #555;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    color:white; 
+}
+
+#lootyRarity {
+    font-weight: bold;
+}
