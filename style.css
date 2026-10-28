@@ -20,15 +20,37 @@ body {
 
 #lootRarity {
 
-    font-weight: bold;
-    background-color: rgb(99, 98, 98) ;
-    border-radius: 20px;
-    width: 80px;
-    text-align: center;
-    text-shadow: white 1px 1px;
-    font-family: sans-serif;
-    margin: auto;
-    padding: 20px;
-    box-shadow: black 1px 1px;
+   font-family: sans-serif;
+   font-weight: bold;
+   text-align: center;
+   background-color: #38342c; 
+   border-radius: 20px;
+   padding: 12px 20px;
+   width: fit-content;
+   margin: 15px auto;
 
 }
+
+#lootAttack {
+    font-size: 20px;
+}
+
+/* Chest Button */
+
+#openChest {
+    display: block;
+    margin: 0 auto;
+    padding: 14px 35px;
+    background-color: #816638;
+    color: white;
+    border: 1px solid #c6a56a;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#openChest:hover {
+    background: #a18450;
+}
+
+/* Inventory Section */
