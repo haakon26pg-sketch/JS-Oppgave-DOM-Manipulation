@@ -49,6 +49,14 @@ body {
     border-radius: 6px;
     font-size: 15px;
     cursor: pointer;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+.header-icon {
+    width: 40px;
+    max-width: 50px;
 }
 
 #openChest:hover {
