@@ -80,42 +80,18 @@ const inventory = [];
 
 openChest.addEventListener("click", function () {
 
-    lootBox.animate(
-        [
-            { transform: "scale(0.95)", opacity: 0.5},
-            { transform: "scale(1)", opacity: 1},
-        ],
-        {
-            duration: 350,
-            easing: "ease-out"
-        }
-    );
+    // 1. genere tilfeldig gjenstand
+    const randomIndex = Math.floor(Math.random() * items.length);
+    const randomitem = items[randomIndex];
 
+    // 2. oppdatert html
+    lootName.textContent = `You obtained ${randomitem.name}!`;
+    lootRarity.textContent = randomitem.rarity;
+    lootAttack.textContent = `Attack: ${randomitem.attack}`;
 
-// Lage randomizer til innholdet som kommer fra kista
-
-console.log(items[0].name);
-console.log(items[0].rarity);
-console.log(items[0].attack);
-
-const randomIndex = Math.floor(Math.random() * items.length);
-
-const randomitem = items[randomIndex];
-
-console.log(randomitem.name);
-console.log(randomitem.rarity);
-
-// Oppdaterer HTML med våpenet som ble gitt
-lootName.textContent = `You found a ${randomitem.name}!`;
-lootRarity.textContent = randomitem.rarity;
-
-// Gi angrepspoeng til våpenet
-lootAttack.textContent = `Attack: ${randomitem.attack}`;
-
-// Gi sjeldenhetsgrader forskjellige farger
-
-if (randomitem.rarity === "Godlike") {
-        lootRarity.style.color = "turquoise"
+    // 3. Your existing rarity if/else statements
+    if (randomitem.rarity === "Godlike") {
+        lootRarity.style.color = "turquoise";
     } else if (randomitem.rarity === "Legendary") {
         lootRarity.style.color = "gold";
     } else if (randomitem.rarity === "Epic") {
@@ -128,19 +104,35 @@ if (randomitem.rarity === "Godlike") {
         lootRarity.style.color = "gray";
     }
 
-// Gjenstander som havner i inventory
-inventory.push(randomitem);
+    // animasjon
+    const rarityColor = lootRarity.style.color;
 
-const inventoryItem = document.createElement("li");
+    lootBox.style.borderColor = rarityColor;
 
-inventoryItem.textContent = `${randomitem.name} - ${randomitem.rarity} - Attack: ${randomitem.attack}`;
+    lootBox.animate(
+        [
+            { boxShadow: "0 0 0px " + rarityColor, transform: "scale(0.95)" },
+            { boxShadow: "0 0 35px " + rarityColor, transform: "scale(1.02)" },
+            { boxShadow: "0 0 0px " + rarityColor, transform: "scale(1)" }
+        ],
+        {
+            duration: 600,
+            easing: "ease-out"
+        }
+    );
 
-inventorylist.appendChild(inventoryItem);
+    // 5. legge våpen til i inventory
+    inventory.push(randomitem);
 
-console.log(inventory);
+    const inventoryItem = document.createElement("li");
+
+    inventoryItem.textContent = `${randomitem.name} - ${randomitem.rarity} - Attack: ${randomitem.attack}`;
+
+    inventoryItem.style.borderLeftColor = rarityColor;
+
+    inventorylist.appendChild(inventoryItem);
 
 });
-
 
 
 

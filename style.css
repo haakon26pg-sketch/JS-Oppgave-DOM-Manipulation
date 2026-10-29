@@ -23,9 +23,10 @@ body {
 #lootRarity {
 
    font-family: sans-serif;
-   font-weight: bold;
+   font-weight: 700;
    text-align: center;
    background-color: #38342c; 
+   font-family: "Big Shoulders", sans-serif;
    border-radius: 20px;
    padding: 12px 20px;
    width: fit-content;
@@ -55,8 +56,9 @@ body {
 }
 
 .header-icon {
-    width: 40px;
+    width: 90px;
     max-width: 50px;
+    justify-content: center;
 }
 
 #openChest:hover {
@@ -85,6 +87,10 @@ body {
     line-height: 1.6;
 }
 
+#inventoryList li {
+    border-left: 4px solid #816638;
+}
+
 /* Fikse heading farger */
 h1,
 .inventory h2 {
@@ -107,4 +113,13 @@ h1,
 
 .inventory h2 {
     margin-bottom: 20px;
+}
+
+#inventoryList {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    align-content: start;
+    scrollbar-width: thin;
+    scrollbar-color: #816638 #28251e;
 }
