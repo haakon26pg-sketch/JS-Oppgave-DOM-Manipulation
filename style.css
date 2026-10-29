@@ -1,9 +1,11 @@
 /* Designe loot-box div siden */
 
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Grenze+Gotisch:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Imbue:opsz,wght@10..100,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jomhuria&family=Jura:wght@300..700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
 body {
-    background-color: #171715;
-    color: #f1ec4ca;
-    font-family: Georgia, serif;
+    background-color: #5a5a50;
+    color: #f1ec4a;
+    font-family: "Grenze Gotisch", sans-serif;
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
@@ -75,4 +77,26 @@ body {
     line-height: 1.6;
 }
 
-/* Fikse  */
+/* Fikse heading farger */
+h1,
+.inventory h2 {
+    color: #d4ae72;
+    text-shadow: #d4ae72 1px;
+}
+
+/* Forbedre inventory cards  */
+#inventoryList li {
+    background-color: #28251e;
+    color: #f1e4ca;
+    border: 1px solid #816632;
+    border-radius: 9px;
+    padding: 18px;
+}
+
+.inventory {
+    margin-top: 50px;
+}
+
+.inventory h2 {
+    margin-bottom: 20px;
+}

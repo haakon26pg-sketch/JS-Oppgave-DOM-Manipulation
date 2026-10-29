@@ -10,22 +10,37 @@ const lootBox = document.querySelector(".loot-box");
 
 const items = [
     {
-        name: "Rusty Sword",
+        name: "Rusty Axe",
         rarity: "Common",
         attack: 3
     },
+     {
+        name: "Wooden Staff",
+        rarity: "Common",
+        attack: 4
+    },
+       {
+        name: "Blunt Mace",
+        rarity: "Common",
+        attack: 3
+    },
+        {
+            name: "Blunt Mace",
+            rarity: "Uncommon",
+            attack: 3
+        },
      {
         name: "Rusty Sword",
         rarity: "Uncommon",
         attack: 6
     },
     {
-        name: "Steel Longsowrd",
+        name: "Steel Longsword",
         rarity: "Uncommon",
         attack: 12
     },
       {
-        name: "Steel Longsowrd",
+        name: "Steel Longsword",
         rarity: "Rare",
         attack: 17
     },
@@ -48,10 +63,16 @@ const items = [
         name: "Dragonslayer",
         rarity: "Legendary",
         attack: 75
-    },    {
-        name: "Sword of The Seven Cosmos",
+    },    
+    {
+        name: "Spear of The Seven Cosmos",
         rarity: "Godlike",
         attack: 1337
+    },
+      {
+        name: "Glaives of The Nether",
+        rarity: "Godlike",
+        attack: 1020
     }
 ];
 
