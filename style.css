@@ -20,6 +20,10 @@ body {
     color:white; 
 }
 
+.H1-chest {
+    text-align: center;
+}
+
 #lootRarity {
 
    font-family: sans-serif;
@@ -36,6 +40,8 @@ body {
 
 #lootAttack {
     font-size: 20px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Kiste knapp */
@@ -56,9 +62,10 @@ body {
 }
 
 .header-icon {
-    width: 90px;
-    max-width: 50px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 60px;
 }
 
 #openChest:hover {
@@ -69,6 +76,10 @@ body {
 
 .inventory {
     margin-top: 50px;
+    background-color: #554834;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #555;
 }
 
 #inventoryList {
